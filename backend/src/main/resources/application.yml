@@ -1,0 +1,28 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dorm-system
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/dorm_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&createDatabaseIfNotExist=true
+    username: ${DB_USERNAME:dorm}
+    password: ${DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+dorm:
+  jwt:
+    secret: ${JWT_SECRET:dorm-system-graduation-design-secret-key-2026-please-change-in-production}
+    expire-hours: 24
+logging:
+  level:
+    com.dorm: info

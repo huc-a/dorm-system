@@ -1,0 +1,9 @@
+# secrets
+.env
+
+# backend build output
+backend/target/
+
+# frontend dependencies & build output
+frontend/node_modules/
+frontend/dist/
