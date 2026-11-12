@@ -7,3 +7,5 @@ backend/target/
 # frontend dependencies & build output
 frontend/node_modules/
 frontend/dist/
+/gen_*.py
+docs/gen_thesis.py
